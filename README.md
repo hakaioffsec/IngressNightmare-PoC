@@ -8,6 +8,9 @@ In the original research, the Wiz team did not provide a PoC or a functional exp
 
 The Ingress NGINX Controller is a widely used component in Kubernetes environments, managing external access to services within clusters. Recent vulnerabilities (CVE-2025-1097, CVE-2025-1098, CVE-2025-24514, CVE-2025-1974) discovered in its admission controller can lead to unauthorized access to all secrets across namespaces and potentially allow complete cluster takeover.
 
+### VIDEO
+https://github.com/user-attachments/assets/9e893abf-5c01-4fcb-ad79-7115b429281f
+
 ### **Exploit Workflow**
 
 The exploit follows these main steps:
